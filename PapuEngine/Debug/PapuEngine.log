@@ -1,0 +1,44 @@
+﻿  Agent.cpp
+  App.cpp
+  Background.cpp
+  Buttom.cpp
+  Camera2D.cpp
+  EndScreen.cpp
+  Enemie.cpp
+  Error.cpp
+  Food.cpp
+C:\Users\ASUS\Desktop\FundaJuego-TF\fundamento\PapuEngine\Enemie.cpp(9,32): warning C4244:  'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  Game.cpp
+  GLS_Program.cpp
+  ImageLoader.cpp
+C:\Users\ASUS\Desktop\FundaJuego-TF\fundamento\PapuEngine\Food.cpp(9,32): warning C4244:  'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\ASUS\Desktop\FundaJuego-TF\fundamento\PapuEngine\ImageLoader.cpp(36,19): warning C4244:  '=': conversión de 'unsigned long' a 'float'; posible pérdida de datos
+  InputManager.cpp
+  IOManager.cpp
+C:\Users\ASUS\Desktop\FundaJuego-TF\fundamento\PapuEngine\ImageLoader.cpp(37,18): warning C4244:  '=': conversión de 'unsigned long' a 'float'; posible pérdida de datos
+C:\Users\ASUS\Desktop\FundaJuego-TF\fundamento\PapuEngine\IOManager.cpp(15,15): warning C4244:  'inicializando': conversión de 'std::streamoff' a 'int'; posible pérdida de datos
+  main.cpp
+  MenuScreen.cpp
+  PapuEngine.cpp
+  picoPNG.cpp
+  PlayScreen.cpp
+C:\Users\ASUS\Desktop\FundaJuego-TF\fundamento\PapuEngine\IOManager.cpp(18,26): warning C4244:  '-=': conversión de 'std::streamoff' a 'int'; posible pérdida de datos
+C:\Users\ASUS\Desktop\FundaJuego-TF\fundamento\PapuEngine\PlayScreen.cpp(99,61): warning C4244:  'argumento': conversión de 'Sint32' a 'float'; posible pérdida de datos
+  ResourceManager.cpp
+  Generando código...
+C:\Users\ASUS\Desktop\FundaJuego-TF\fundamento\PapuEngine\PlayScreen.cpp(99,45): warning C4244:  'argumento': conversión de 'Sint32' a 'float'; posible pérdida de datos
+  Compilando...
+  ScreenList.cpp
+  Ship.cpp
+  Sprite.cpp
+  SpriteBacth.cpp
+C:\Users\ASUS\Desktop\FundaJuego-TF\fundamento\PapuEngine\Camera2D.cpp(38): warning C4715:  'Camera2D::isBoxInView': no todas las rutas de acceso de control devuelven un valor
+C:\Users\ASUS\Desktop\FundaJuego-TF\fundamento\PapuEngine\SpriteBacth.cpp(45,22): warning C4018:  '<': no coinciden signed/unsigned
+  SpriteFont.cpp
+  TextureCache.cpp
+  Timing.cpp
+C:\Users\ASUS\Desktop\FundaJuego-TF\fundamento\PapuEngine\SpriteBacth.cpp(73,20): warning C4018:  '<': no coinciden signed/unsigned
+  Window.cpp
+  Generando código...
+C:\Users\ASUS\Desktop\FundaJuego-TF\fundamento\PapuEngine\Timing.cpp(22,41): warning C4244:  'argumento': conversión de 'float' a 'Uint32'; posible pérdida de datos
+  PapuEngine.vcxproj -> C:\Users\ASUS\Desktop\FundaJuego-TF\fundamento\Debug\PapuEngine.exe
