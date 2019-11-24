@@ -156,6 +156,9 @@
     <ClCompile Include="MembersScreen.cpp">
       <Filter>Source Files\Game\Screens</Filter>
     </ClCompile>
+    <ClCompile Include="TurorialScreen.cpp">
+      <Filter>Source Files\Game\Screens</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PapuEngine.h">
@@ -252,6 +255,9 @@
       <Filter>Header Files\Game\Entities</Filter>
     </ClInclude>
     <ClInclude Include="MembersScreen.h">
+      <Filter>Header Files\Game\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="TurorialScreen.h">
       <Filter>Header Files\Game\Screens</Filter>
     </ClInclude>
   </ItemGroup>

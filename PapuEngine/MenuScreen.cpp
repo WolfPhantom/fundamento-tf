@@ -66,7 +66,7 @@ void MenuScreen::checkInput() {
 		//glm::vec2 coord = glm::vec2(coordenadas.x, int(coordenadas.y)%100 );
 		if (!isClicked && buttom->cliked(coordenadas, glm::vec2(_window->getScreenWidth(), _window->getScreenHeight()))) {
 			isClicked = true;
-			std::cout << "Cambio de pantalla Juego"<<endl;
+			std::cout << "Cambio de pantalla Tutorial"<<endl;
 			_currentState = ScreenState::CHANGE_NEXT;
 			//destroy();
 		}
@@ -159,7 +159,7 @@ int MenuScreen::getPreviousScreen() const {
 }
 
 int MenuScreen::getNextScreen() const {
-	return SCREEN_INDEX_GAME;
+	return SCREEN_INDEX_TUTORIAL;
 }
 
 MenuScreen::~MenuScreen()
