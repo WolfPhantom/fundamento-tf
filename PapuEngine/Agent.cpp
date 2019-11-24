@@ -3,7 +3,7 @@
 #include <algorithm>
 
 Agent::Agent(float agent_width, float agent_height, glm::vec2 position, std::string texture):
-	_agent_width(agent_width), _agent_height(agent_height), 
+	_agent_width(agent_width), _agent_height(agent_height),
 	_agent_radius(agent_width/2),
 	_position(position),
 	_texturePath(texture)

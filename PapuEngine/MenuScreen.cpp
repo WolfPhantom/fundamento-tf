@@ -4,7 +4,7 @@
 #include <iostream>
 
 MenuScreen::MenuScreen(Window* window):
-	_window(window), btnGameClicked(false)
+	_window(window), btnGameClicked(false), btnMembersClicked(false),isClicked(false)
 {
 	_screenIndex = SCREEN_INDEX_MENU;
 }
@@ -23,6 +23,7 @@ void MenuScreen::initSystem() {
 
 void MenuScreen::destroy() {
 	delete buttom;
+	delete buttom2;
 	delete background;
 	delete spriteFont;
 }
@@ -43,8 +44,8 @@ void MenuScreen::onEntry() {
 	background = new Background("Textures/menu1.png");
 	spriteFont = new SpriteFont("Fonts/ShakaPowHollow.ttf",64);
 	spriteFont1 = new SpriteFont("Fonts/ShakaPowHollow.ttf", 64);
-	buttom = new Buttom("Textures/menu_button.png");
-
+	buttom = new Buttom("Textures/menu_button.png", glm::vec2(280, 100));
+	buttom2 = new Buttom("Textures/menu_button.png", glm::vec2(280, 50));
 	
 }
 
@@ -59,15 +60,20 @@ void MenuScreen::checkInput() {
 		_game->onSDLEvent(event);
 	}
 	if (_game->_inputManager.isKeyDown(SDL_BUTTON_LEFT))
-	{
-		
+	{		
 		std::cout << isClicked << endl;
 		glm::vec2 coordenadas = _game->_inputManager.getMouseCoords();
-		glm::vec2 coord = glm::vec2(coordenadas.x, int(coordenadas.y)%100 );
-		if (!isClicked && buttom->cliked(coord)) {
+		//glm::vec2 coord = glm::vec2(coordenadas.x, int(coordenadas.y)%100 );
+		if (!isClicked && buttom->cliked(coordenadas, glm::vec2(_window->getScreenWidth(), _window->getScreenHeight()))) {
 			isClicked = true;
-			std::cout << "Cambio de pantalla"<<endl;
+			std::cout << "Cambio de pantalla Juego"<<endl;
 			_currentState = ScreenState::CHANGE_NEXT;
+			//destroy();
+		}
+		else if (!isClicked && buttom2->cliked(coordenadas, glm::vec2(_window->getScreenWidth(), _window->getScreenHeight()))) {
+			isClicked = true;
+			std::cout << "Cambio de pantalla Miembros" << endl;
+			_currentState = ScreenState::CHANGE_PREVIOUS;
 			//destroy();
 		}
 	}
@@ -87,28 +93,28 @@ void MenuScreen::draw() {
 	_spriteBatch.begin();
 
 	buttom->draw(_spriteBatch);
+	buttom2->draw(_spriteBatch);
 	background->draw(_spriteBatch);
 	
 	_spriteBatch.end();
 	_spriteBatch.renderBatch();
+
+	//Titulo Juego
 	char buffer[256];
 	_spriteBatch.begin();
 	sprintf(
-		buffer, "Nombre del Juego"
+		buffer, "Foggie"
 	);
-
-	
+		
 	spriteFont->draw(_spriteBatch, buffer,
-		glm::vec2(250, 400), glm::vec2(0.5), 0.0f,
+		glm::vec2(320, 400), glm::vec2(0.5), 0.0f,
 		ColorRGBA(255, 0, 0, 255)
 		);
-
-	
 
 	_spriteBatch.end();
 	_spriteBatch.renderBatch();
 
-	//
+	// Button Jugar
 	char buffer1[256];
 	_spriteBatch.begin();
 	sprintf(
@@ -125,6 +131,21 @@ void MenuScreen::draw() {
 
 	_spriteBatch.end();
 	_spriteBatch.renderBatch();
+
+	// Button Miembros
+	char buffer2[256];
+	_spriteBatch.begin();
+	sprintf(
+		buffer2, "Miembros"
+	);
+
+	spriteFont1->draw(_spriteBatch, buffer2,
+		glm::vec2(300, 60), glm::vec2(0.5), 0.0f,
+		ColorRGBA(255, 0, 0, 255)
+	);
+
+	_spriteBatch.end();
+	_spriteBatch.renderBatch();
 	//
 
 	glBindTexture(GL_TEXTURE_2D, 0);
@@ -134,7 +155,7 @@ void MenuScreen::draw() {
 void MenuScreen::build() {}
 
 int MenuScreen::getPreviousScreen() const {
-	return SCREEN_INDEX_NO_SCREEN;
+	return SCREEN_INDEX_MEMBERS;
 }
 
 int MenuScreen::getNextScreen() const {

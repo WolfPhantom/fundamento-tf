@@ -1,9 +1,9 @@
 #include "Buttom.h"
 #include "ResourceManager.h"
 #include <iostream>
-Buttom::Buttom(std::string texture)
+Buttom::Buttom(std::string texture,glm::vec2 pos)
 {
-	position = glm::vec2( 280, 100);
+	position = pos;
 	textureID = ResourceManager::getTexture(texture).id;
 }
 
@@ -20,12 +20,13 @@ void Buttom::setColor(ColorRGBA color)
 {
 }
 
-bool Buttom::cliked(glm::vec2 _position)
+bool Buttom::cliked(glm::vec2 _position, glm::vec2 windowSize)
 {
-	return(position.x < _position.x) &&
-		  (position.x +190 > _position.x) &&
-		  (position.y < position.y+50) &&
-		  (position.y+50 > _position.y );
+	bool result = (position.x < _position.x) &&
+		  (position.x +190 > _position.x) 
+		&& (windowSize.y - _position.y > position.y)
+		&& (windowSize.y - _position.y < position.y + 50);
+	return result;
 }
 
 void Buttom::setPosition(glm::vec2 _position)

@@ -17,14 +17,16 @@ private:
 	Background* background = nullptr;
 	Window* _window = nullptr;
 	bool btnGameClicked;
+	bool btnMembersClicked;
 	GLS_Program _program;
 	SpriteBacth _spriteBatch;
 	SpriteFont* spriteFont;
 	SpriteFont* spriteFont1;
 	Buttom * buttom;
-
+	Buttom* buttom2;
 
 	bool isClicked;
+
 public:
 	MenuScreen(Window* window);
 	virtual void build() override;

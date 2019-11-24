@@ -153,6 +153,9 @@
     <ClCompile Include="Food.cpp">
       <Filter>Source Files\Game\Entities</Filter>
     </ClCompile>
+    <ClCompile Include="MembersScreen.cpp">
+      <Filter>Source Files\Game\Screens</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PapuEngine.h">
@@ -247,6 +250,9 @@
     </ClInclude>
     <ClInclude Include="Food.h">
       <Filter>Header Files\Game\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="MembersScreen.h">
+      <Filter>Header Files\Game\Screens</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -14,11 +14,11 @@ private:
 
 public:
 
-	Buttom(std::string texture);
+	Buttom(std::string texture, glm::vec2 pos);
 	void draw(SpriteBacth& spriteBatch);
 	void setColor(ColorRGBA color);
 
-	bool cliked(glm::vec2 position);
+	bool cliked(glm::vec2 position, glm::vec2 windowSize);
 	void setPosition(glm::vec2 position);
 	glm::vec2 getPosition()const {
 		return position;

@@ -134,6 +134,7 @@
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="IOManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MembersScreen.cpp" />
     <ClCompile Include="MenuScreen.cpp" />
     <ClCompile Include="PapuEngine.cpp" />
     <ClCompile Include="picoPNG.cpp" />
@@ -165,6 +166,7 @@
     <ClInclude Include="ImageLoader.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="IOManager.h" />
+    <ClInclude Include="MembersScreen.h" />
     <ClInclude Include="MenuScreen.h" />
     <ClInclude Include="MyScreens.h" />
     <ClInclude Include="PapuEngine.h" />
